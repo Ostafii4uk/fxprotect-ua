@@ -1,0 +1,14 @@
+.header {
+  margin: 0 auto;
+  width: 1200px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+}
+
+.nav {
+  &__items {
+    display: flex;
+  }
+}
