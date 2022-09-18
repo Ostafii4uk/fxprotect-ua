@@ -40,9 +40,16 @@
     margin: 0 auto;
     padding: 15px 50px;
     font-size: 14px;
-    border: 1px solid #3399ff;
+    border: 1px solid;
+    border-color: #3399ff;
     background-color: transparent;
     color: #3399ff;
+    transition: color 0.3s linear, border-color 0.3s linear ;
+
+    &:hover {
+      border-color: white;
+      color: white;
+    }
   }
 }
 
