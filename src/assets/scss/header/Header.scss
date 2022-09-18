@@ -4,10 +4,11 @@
 
 
   &__container {
-    position: fixed;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+    // position: fixed;
+    // left: 50%;
+    // top: 0;
+    // transform: translateX(-50%);
+    margin: 0 auto;
     width: 1200px;
     display: flex;
     align-items: center;
