@@ -1,18 +1,9 @@
 <template src='./Header.html' />
-<style lang='scss' rel='stylesheet/scss' scoped src='../../assets/scss/header/Header.scss' />
+<style lang='scss' rel='stylesheet/scss' scoped src='../../assets/scss/header/header.scss' />
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faUserSecret)
-
 export default {
   name: 'Header',
-  components: {
-    FontAwesomeIcon
-  },
   data() {
     return {
       navItems: [{
