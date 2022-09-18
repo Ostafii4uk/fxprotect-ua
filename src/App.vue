@@ -1,15 +1,8 @@
 <template>
   <Header />
 </template>
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  ul {
-    list-style: none;
-  }
-</style>
+
+<style lang='scss' rel='stylesheet/scss' src='./assets/scss/main.scss' />
 
 <script>
   import Header from './components/header/Header.vue'

@@ -1,14 +1,110 @@
 .header {
-  margin: 0 auto;
-  width: 1200px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  background-color: #333333;
+  height: 60px;
+  background-color: #000000;
+
+  &__container {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1200px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+  }
 }
 
 .nav {
   &__items {
     display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 25px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 60px;
+
+    &:hover {
+      color: #3399ff;
+      transition: color 0.15s linear;
+
+      & .nav__caret-down-ico-color {
+        fill: #3399ff;
+        transition: fill 0.15s linear;
+      }
+    }
+  }
+
+  &__sub-items {
+    visibility: hidden;
+    opacity: 0;
+    padding: 15px 0;
+    position: absolute;
+    width: 210px;
+    background-color: #222222;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 8%);
+    border-radius: 3px;
+
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s linear;
+    }
+  }
+
+  &__sub-link {
+    padding: 12px 20px;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 100;
+
+    &:hover {
+      background-color: #111111;
+    }
+  }
+
+  &__caret-down-ico {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__link {
+    &:hover {
+      & .social__icon-color {
+        fill: #3399ff;
+        transition: fill 0.15s linear;
+      }
+    }
   }
 }

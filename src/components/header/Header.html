@@ -1,16 +1,135 @@
 <header class="header">
-  <div class="header__logo">
-    <img src="https://fxprotect.com/wp-content/uploads/sites/3/2018/06/fxprotect-white.png" alt="">
-  </div>
-  <nav class="header__nav nav">
-    <ul class="nav__items">
-      <li class="nav__item">Про нас</li>
-      <li class="nav__item">Продукція</li>
-      <li class="nav__item">Для клієнта</li>
-      <li class="nav__item">Контакти</li>
-    </ul>
-  </nav>
-  <div class="header__links">
-    <i class="fa fa-instagram"></i>
+  <div class="header__container">
+    <div class="header__logo">
+      <img src="https://fxprotect.com/wp-content/uploads/sites/3/2018/06/fxprotect-white.png" alt="">
+    </div>
+    <nav class="header__nav nav">
+      <ul class="nav__items">
+        <li class="nav__item" @mouseover="mouseOverNavItem()">
+          <a class="nav__link" href="#">Про нас</a>
+        </li>
+        <li class="nav__item" @mouseover="mouseOverNavItem('Products')">
+          <a class="nav__link" href="#">
+            Продукція
+            <svg class="nav__caret-down-ico"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              viewBox="0 -256 1792 1792"
+              id="svg2989"
+              version="1.1"
+              inkscape:version="0.48.3.1 r9886"
+              width="100%"
+              height="100%"
+              sodipodi:docname="caret_down_font_awesome.svg">
+              <g
+                transform="matrix(1,0,0,-1,402.44068,1239.8644)"
+                id="g2991">
+                <path
+                  class="nav__caret-down-ico-color"
+                  d="m 1024,832 q 0,-26 -19,-45 L 557,339 q -19,-19 -45,-19 -26,0 -45,19 L 19,787 q -19,19 -19,45 0,26 19,45 19,19 45,19 h 896 q 26,0 45,-19 19,-19 19,-45 z"
+                  id="path2993"
+                  inkscape:connector-curvature="0"
+                  fill="#ffffff" />
+              </g>
+            </svg>
+          </a>
+          <ul class="nav__sub-items" :class="{ 'nav__sub-items--visible': getItemVisibleFlage('Products') }" @mouseleave="mouseLeaveNavItem('Products')">
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 1
+              </a>
+            </li>
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 2
+              </a>
+            </li>
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 3
+              </a>
+            </li>
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 4
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item" @mouseover="mouseOverNavItem('ForClients')">
+          <a class="nav__link" href="#">
+            Для клієнта
+            <svg class="nav__caret-down-ico"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              viewBox="0 -256 1792 1792"
+              id="svg2989"
+              version="1.1"
+              inkscape:version="0.48.3.1 r9886"
+              width="100%"
+              height="100%"
+              sodipodi:docname="caret_down_font_awesome.svg">
+              <g
+                transform="matrix(1,0,0,-1,402.44068,1239.8644)"
+                id="g2991">
+                <path
+                  class="nav__caret-down-ico-color"
+                  d="m 1024,832 q 0,-26 -19,-45 L 557,339 q -19,-19 -45,-19 -26,0 -45,19 L 19,787 q -19,19 -19,45 0,26 19,45 19,19 45,19 h 896 q 26,0 45,-19 19,-19 19,-45 z"
+                  id="path2993"
+                  inkscape:connector-curvature="0"
+                  fill="#ffffff" />
+              </g>
+            </svg>
+          </a>
+          <ul class="nav__sub-items" :class="{ 'nav__sub-items--visible': getItemVisibleFlage('ForClients') }" @mouseleave="mouseLeaveNavItem('ForClients')">
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 1
+              </a>
+            </li>
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 2
+              </a>
+            </li>
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 3
+              </a>
+            </li>
+            <li class="nav__sub-item">
+              <a class="nav__sub-link" href="#">
+                Шаблон 4
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item" @mouseover="mouseOverNavItem()">
+          <a class="nav__link" href="#">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__social social">
+      <a class="social__link" href="https://www.instagram.com/fx_protect/" target="_blank">
+        <svg class="social__icon" fill="#bababa" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="20px" height="20px">
+          <path class="social__icon-color" d="M 8 5 C 6.355469 5 5 6.355469 5 8 L 5 24 C 5 25.644531 6.355469 27 8 27 L 24 27 C 25.644531 27 27 25.644531 27 24 L 27 8 C 27 6.355469 25.644531 5 24 5 Z M 21 8 L 24 8 L 24 11 L 21 11 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z M 7 14 L 10.34375 14 C 10.121094 14.625 10 15.300781 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 15.300781 21.878906 14.625 21.65625 14 L 25 14 L 25 24 C 25 24.566406 24.566406 25 24 25 L 8 25 C 7.433594 25 7 24.566406 7 24 Z"/>
+        </svg>
+      </a>
+      <a class="social__link" href="https://www.facebook.com/fxprotect/" target="_blank">
+        <svg class="social__icon" fill="#bababa" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="20px" height="20px">
+          <path class="social__icon-color" d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"/>
+        </svg>
+      </a>
+    </div>
   </div>
 </header>
