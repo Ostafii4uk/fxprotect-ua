@@ -1,0 +1,88 @@
+.selected-projects {
+  padding: 60px 0 20px;
+
+  &__container {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #3399ff;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+  }
+
+  &__cards {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 320px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    padding: 18px 25px;
+    background-color: #3399ff;
+    background-image: linear-gradient(to right, #3399ff 0%, #0772ba 50%,#3399ff 100%);
+    background-size: 200% 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    border-radius: 2em;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-position: 100% 0;
+    }
+  }
+}
+
+.card {
+  width: 280px;
+  transform: translate(0, 0);
+  transition: transform 0.3s linear;
+
+  &:hover {
+    cursor: pointer;
+    transform: translate(-5px, -5px);
+    transition: transform 0.3s linear;
+
+    & .card__description {
+      color: #3399ff;
+    }
+  }
+
+  &__image {
+    width: 280px;
+    height: 190px;
+  }
+
+  &__text {
+    padding: 15px;
+  }
+
+  &__description {
+    margin-bottom: 5px;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &__date {
+    color: #999999;
+    font-size: 14px;
+  }
+}
