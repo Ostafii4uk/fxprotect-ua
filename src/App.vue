@@ -4,6 +4,7 @@
   <AboutProduct />
   <SelectedProjects />
   <SecurityType />
+  <Footer />
 </template>
 
 <style lang='scss' rel='stylesheet/scss' src='./assets/scss/main.scss' />
@@ -14,9 +15,10 @@
   import AboutProduct from './components/about-product/AboutProduct.vue'
   import SelectedProjects from './components/selected-projects/SelectedProjects.vue'
   import SecurityType from './components/security-type/SecurityType.vue'
+  import Footer from './components/footer/Footer.vue'
   
   export default {
     name: 'App',
-    components: { Header, Preview, AboutProduct, SelectedProjects, SecurityType }
+    components: { Header, Preview, AboutProduct, SelectedProjects, SecurityType, Footer }
   }
 </script>

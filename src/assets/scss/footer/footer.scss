@@ -1,0 +1,40 @@
+.footer {
+  padding: 70px 30px;
+  background-color: #0772ba;
+
+  &__container {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+}
+
+.column {
+  &__title {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+  }
+
+  &__item {
+    padding: 8px 0;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #ffffffb3;
+    font-weight: 300;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: white;
+      transition: color 0.3s linear;
+    }
+  }
+}
