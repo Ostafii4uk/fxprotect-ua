@@ -3,6 +3,7 @@
   <Preview />
   <AboutProduct />
   <SelectedProjects />
+  <SecurityType />
 </template>
 
 <style lang='scss' rel='stylesheet/scss' src='./assets/scss/main.scss' />
@@ -12,9 +13,10 @@
   import Preview from './components/preview/Preview.vue'
   import AboutProduct from './components/about-product/AboutProduct.vue'
   import SelectedProjects from './components/selected-projects/SelectedProjects.vue'
+  import SecurityType from './components/security-type/SecurityType.vue'
   
   export default {
     name: 'App',
-    components: { Header, Preview, AboutProduct, SelectedProjects }
+    components: { Header, Preview, AboutProduct, SelectedProjects, SecurityType }
   }
 </script>

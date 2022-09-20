@@ -1,0 +1,57 @@
+.security-type {
+  padding: 60px 0;
+
+  &__container {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__image, &__descrition {
+    width: 50%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #3399ff;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+  }
+
+  &__button {
+    width: 280px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px 25px;
+    background-color: #3399ff;
+    background-image: linear-gradient(to right, #3399ff 0%, #0772ba 50%,#3399ff 100%);
+    background-size: 200% 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    border-radius: 2em;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-position: 100% 0;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+  }
+}
