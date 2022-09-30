@@ -3,7 +3,7 @@
 
   &__container {
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
   }
 
   &__title {
@@ -23,6 +23,7 @@
   &__cards {
     margin-bottom: 25px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
