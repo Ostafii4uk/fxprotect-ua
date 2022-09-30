@@ -1,0 +1,206 @@
+.instagram {
+  background-color: #212121;
+  padding: 30px;
+
+  &__container {
+    margin: 0 auto;
+    width: 1200px;
+  }
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &:hover {
+    cursor: pointer;
+
+    .header {
+      &__icon-background {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s linear;
+      }
+
+      &__bio {
+        color: white;
+        transition: color 0.3s linear;
+      }
+
+      &__title {
+        color: #3399ff;
+        transition: color 0.3s linear;
+      }
+    }
+  }
+
+  &__logo {
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+  }
+
+  &__icon-background {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 40px;
+    transition: opacity 0.3s linear;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+  }
+  
+
+  &__title {
+    color: #333333;
+    font-size: 16px;
+    transition: color 0.3s linear;
+  }
+
+  &__bio {
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    font-weight: 100;
+    transition: color 0.3s linear;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__images {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  &__image {
+    position: relative;
+    height: 188px;
+    width: 188px;
+    background-position: center;
+    background-size: cover;
+
+    &--1 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/307219981_834133471279979_6802493036122352899_nlow.jpg);
+    }
+
+    &--2 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/306517848_1224863601391327_8386106359225952953_nlow.jpg);
+    }
+
+    &--3 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/306228481_786050172445953_6103374256337479855_nlow.jpg);
+    }
+
+    &--4 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/305668514_769016791056410_5603859830600216661_nlow.jpg);
+    }
+
+    &--5 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/305911946_1518975458572419_6925524769873962086_nlow.jpg);
+    }
+
+    &--6 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/305372416_1442045259628910_9069193815010966229_nlow.jpg);
+    }
+
+    &--7 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/305302610_554078466499232_1086404386348680821_nlow.jpg);
+    }
+
+    &--8 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/305381390_804977057170476_1784675673571649355_nlow.jpg);
+    }
+
+    &--9 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/302450891_1172530479967792_506340043913549879_nlow.jpg);
+    }
+
+    &--10 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/302399739_1516880162092123_7169403820828860378_nlow.jpg);
+    }
+
+    &--11 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/302242673_1264575677631692_5831142231154236021_nlow.jpg);
+    }
+
+    &--12 {
+      background-image: url(https://fxprotect.com/pl/wp-content/uploads/sites/3/sb-instagram-feed-images/299757162_394868672790262_1718043532466642564_nlow.jpg);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 25px;
+    padding: 7px 14px;
+    background-color: #408bd1;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 100;
+    border-radius: 4px;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: #359dff;
+      transition: background-color 0.3s linear;
+    }
+  }
+
+  &__button-icon {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.footer {
+  &__privacy-title {
+    margin-bottom: 15px;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    font-weight: 100;
+  }
+
+  &__privacy-text {
+    margin-bottom: 25px;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 100;
+  }
+}

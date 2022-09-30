@@ -5,6 +5,7 @@
   <SelectedProjects />
   <SecurityType />
   <Footer />
+  <Instagram />
 </template>
 
 <style lang='scss' rel='stylesheet/scss' src='./assets/scss/main.scss' />
@@ -16,9 +17,10 @@
   import SelectedProjects from './components/selected-projects/SelectedProjects.vue'
   import SecurityType from './components/security-type/SecurityType.vue'
   import Footer from './components/footer/Footer.vue'
+  import Instagram from './components/instagram/Instagram.vue'
   
   export default {
     name: 'App',
-    components: { Header, Preview, AboutProduct, SelectedProjects, SecurityType, Footer }
+    components: { Header, Preview, AboutProduct, SelectedProjects, SecurityType, Footer, Instagram }
   }
 </script>
