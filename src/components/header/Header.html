@@ -131,5 +131,138 @@
         </svg>
       </a>
     </div>
+    <div class="header__nav-mobile nav-mobile">
+      <svg class="nav-mobile__icon" @click="onClickNavMobileVisibleFlag" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path fill="white" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+      </svg>
+      <div class="nav-mobile__menu" :class="{ 'nav-mobile__menu--visible': this.navMobileVisibleFlag }">
+        <div class="nav-mobile__header">
+          <h3 class="nav-mobile__title">Меню</h3>
+          <svg class="nav-mobile__close-menu-svg" @click="onClickNavMobileVisibleFlag" height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path fill="white" d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z"/>
+          </svg>
+        </div>
+        <ul class="nav-mobile__items">
+          <li class="nav-mobile__item" @click="onClickNavItemDropdownVisibleFlag('AboutUs')">
+            <p class="nav-mobile__item-title">
+              Про нас
+              <svg class="nav-mobile__dropdown-menu-svg" :class="{ 'nav-mobile__dropdown-menu-svg--active': getNavItemMobileDropdownVisibleFlag('AboutUs') }" height="1792" viewBox="0 0 1792 1792" width="1792">
+                <path fill="#999999" d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/>
+              </svg>
+            </p>
+          </li>
+          <li v-if="this.getNavItemMobileDropdownVisibleFlag('AboutUs')" class="nav-mobile__item nav-mobile__item--retreat">
+            <ul class="nav-mobile__dropdown-menu dropdown-menu" :class=" {'dropdown-menu--visible': this.getNavItemMobileDropdownVisibleFlag('AboutUs') }">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Новини</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-mobile__item" @click="onClickNavItemDropdownVisibleFlag('Products')">
+            <p class="nav-mobile__item-title">
+              Продукти
+              <svg class="nav-mobile__dropdown-menu-svg" height="1792" viewBox="0 0 1792 1792" width="1792">
+                <path fill="#999999" d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/>
+              </svg>
+            </p>
+          </li>
+          <li v-if="this.getNavItemMobileDropdownVisibleFlag('Products')" class="nav-mobile__item nav-mobile__item--retreat">
+            <ul class="nav-mobile__dropdown-menu dropdown-menu" :class=" {'dropdown-menu--visible': this.getNavItemMobileDropdownVisibleFlag('Products') }">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Захисні покриття</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Автокосметика</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Дезінфікуюча рідина</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Аксесуари</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-mobile__item" @click="onClickNavItemDropdownVisibleFlag('ForClients')">
+            <p class="nav-mobile__item-title">
+              Для клієнта
+              <svg class="nav-mobile__dropdown-menu-svg" height="1792" viewBox="0 0 1792 1792" width="1792">
+                <path fill="#999999" d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/>
+              </svg>
+            </p>
+          </li>
+          <li v-if="this.getNavItemMobileDropdownVisibleFlag('ForClients')" class="nav-mobile__item nav-mobile__item--retreat">
+            <ul class="nav-mobile__dropdown-menu dropdown-menu" :class=" {'dropdown-menu--visible': this.getNavItemMobileDropdownVisibleFlag('ForClients') }">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Що таке захисні покриття?</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Сертифіковані експерти</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Де купити</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Інтернет-магазин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-mobile__item" @click="onClickNavItemDropdownVisibleFlag('ForPartner')">
+            <p class="nav-mobile__item-title">
+              Для партнера
+              <svg class="nav-mobile__dropdown-menu-svg" height="1792" viewBox="0 0 1792 1792" width="1792">
+                <path fill="#999999" d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/>
+              </svg>
+            </p>
+          </li>
+          <li v-if="this.getNavItemMobileDropdownVisibleFlag('ForPartner')" class="nav-mobile__item nav-mobile__item--retreat">
+            <ul class="nav-mobile__dropdown-menu dropdown-menu" :class=" {'dropdown-menu--visible': this.getNavItemMobileDropdownVisibleFlag('ForPartner') }">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Стати дистриб'ютором</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Станьте сертифікованим експертом</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Завантажити</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Інструкція із застосування</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-mobile__item">
+            <a class="nav-mobile__link" href="#">
+              Реалізація
+            </a>
+          </li>
+          <li class="nav-mobile__item" @click="onClickNavItemDropdownVisibleFlag('InternetShop')">
+            <p class="nav-mobile__item-title">
+              Інтернет магазин
+              <svg class="nav-mobile__dropdown-menu-svg" height="1792" viewBox="0 0 1792 1792" width="1792">
+                <path fill="#999999" d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/>
+              </svg>
+            </p>
+          </li>
+          <li v-if="this.getNavItemMobileDropdownVisibleFlag('InternetShop')" class="nav-mobile__item nav-mobile__item--retreat">
+            <ul class="nav-mobile__dropdown-menu dropdown-menu" :class=" {'dropdown-menu--visible': this.getNavItemMobileDropdownVisibleFlag('InternetShop') }">
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Мій рахунок</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Логін</a>
+              </li>
+              <li class="dropdown-menu__item">
+                <a class="dropdown-menu__link" href="#">Реєстрація</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-mobile__item">
+            <a class="nav-mobile__link" href="#">
+              Контак з нами
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>

@@ -7,12 +7,27 @@ export default {
   data() {
     return {
       navItems: [{
+        keyword: 'AboutUs',
+        mouseVisibleFlag: false,
+        dropdownVisibleFlag: false
+      }, {
         keyword: 'Products',
-        mouseVisibleFlag: false
+        mouseVisibleFlag: false,
+        dropdownVisibleFlag: false
       }, {
         keyword: 'ForClients',
-        mouseVisibleFlag: false
-      }]
+        mouseVisibleFlag: false,
+        dropdownVisibleFlag: false
+      }, {
+        keyword: 'ForPartner',
+        mouseVisibleFlag: false,
+        dropdownVisibleFlag: false
+      }, {
+        keyword: 'InternetShop',
+        mouseVisibleFlag: false,
+        dropdownVisibleFlag: false
+      }],
+      navMobileVisibleFlag: false
     }
   },
   methods: {
@@ -29,6 +44,17 @@ export default {
     },
     getItemVisibleFlage(keyword) {
       return this.navItems.find(navItem => navItem.keyword === keyword).mouseVisibleFlag
+    },
+    onClickNavMobileVisibleFlag() {
+      this.navMobileVisibleFlag = !this.navMobileVisibleFlag
+    },
+    onClickNavItemDropdownVisibleFlag(navItemKeyword) {
+      const navItem = this.navItems.find(navItem => navItem.keyword === navItemKeyword)
+      navItem.dropdownVisibleFlag = !navItem.dropdownVisibleFlag
+    },
+    getNavItemMobileDropdownVisibleFlag(navItemKeyword) {
+      const navItem = this.navItems.find(navItem => navItem.keyword === navItemKeyword)
+      return  navItem.dropdownVisibleFlag
     }
   }
 }
